@@ -8,6 +8,15 @@ body{
   margin: 0;
 }
 
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: linear-gradient(transparent, var(--mainColor), transparent);
+}
+
 .container1{
   width: 85%;
   height: auto;

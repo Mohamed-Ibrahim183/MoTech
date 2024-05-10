@@ -1,10 +1,15 @@
+@use "../../breakpoints" as *;
 @import url("../../_variables.scss");
+// @import url("../../_breakpoints.scss");
 .Landing{
   width: 100%;
   height: calc(100vh - 80px);
   background-image: url("../../Images/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-clip: border-box;
   color: white;
   display: flex;
   .container1{
@@ -21,6 +26,12 @@
     font-size: 50px;
     font-weight: bold;
     opacity: 0.8;
+    @include breakpoint(745px){
+      font-size: 42px;
+    }
+    @include sm(){
+      font-size: 32px;
+    }
   }
   .Text{
     margin-top: 20px;
@@ -31,6 +42,26 @@
     line-height: 1.8;
     font-size: 20px;
     opacity: 0.8;
+    @include sm(){
+      font-size: 16px;
+      line-height: 1.5;
+      width: 300px;
+    }
+  }
+}
+
+.mainHeading{
+  text-align: center;
+  .Heading1{
+    color: var(--mainColor);
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: capitalize;
+  }
+  .Heading2{
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 32px;
   }
 }
 
@@ -56,6 +87,9 @@
       border-radius: 24px;
       display: flex;
       margin-bottom: 64px;
+      @include breakpoint(900px){
+        flex-direction: column;
+      }
       &:hover{
         .serviceHeading{
           color: var(--mainColor);
@@ -66,6 +100,9 @@
       }
       .image{
         width: 40%;
+        @include breakpoint(900px){
+          width: 100%;
+        }
         img{
           height: 100%;
           width: 100%;
@@ -76,6 +113,10 @@
         width: 55%;
         padding: 20px;
         text-align: left;
+        @include breakpoint(900px){
+          width: 100%;
+          text-align: center;
+        }
         .serviceHeading{
           font-size: 40px;
           margin-bottom: 32px;
@@ -91,6 +132,38 @@
           opacity: 0.7;
           
         }
+      }
+    }
+  }
+}
+
+%inputArea{
+  display: inline-block;
+  border-radius: 16px;
+  width: 50%;
+  padding: 8px;
+  @include md(){
+    width: 100%;
+  }
+}
+.Contact{
+  .container1{
+    main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 24px;
+      #userMail{
+        @extend %inputArea;
+      }
+      #userMessage{
+        @extend %inputArea;
+        height: 200px;
+      }
+      .mainBtn{
+        display: inline-block;
+        width: 50% !important;
       }
     }
   }

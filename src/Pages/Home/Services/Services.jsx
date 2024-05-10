@@ -8,8 +8,8 @@ const Services = () => {
         <div className="mainHeading">
           <h2 className="Heading1">Services</h2>
           <p className="Heading2">What We Offer</p>
-          {/* <img src="./Images/FrontEnd.jpg" alt="" /> */}
-
+        </div>
+        <div className="cards">
           <Card
             imageSource="./Images/FrontEnd.jpg"
             Alt="Front-End"
