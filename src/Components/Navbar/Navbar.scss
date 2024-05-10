@@ -1,0 +1,49 @@
+@import url("../../_variables.scss");
+@import url("../../_breakpoints.scss");
+#HEADER{
+  background-color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  .container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    
+    .logo{
+      span{
+        font-size:30px;
+        // color: var(--mainColor);
+        .Pre{
+          color: var(--mainColor);
+        }
+      }
+    }
+    .Links{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      
+      .nav-link{
+        opacity: 0.8;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: capitalize;
+        transition: 0.5s;
+
+        &:hover {
+          font-weight: bold;
+          opacity: 1;
+          color: var(--mainColor);
+          font-size: 24px;
+          text-decoration: underline;
+        }
+      }
+      .active-link{
+        text-decoration: underline;
+      }
+    }
+  }
+}

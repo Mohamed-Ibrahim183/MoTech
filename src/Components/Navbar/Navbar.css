@@ -1,0 +1,43 @@
+@import url("../../_variables.scss");
+@import url("../../_breakpoints.scss");
+#HEADER {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+#HEADER .container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#HEADER .container1 .logo span {
+  font-size: 30px;
+}
+#HEADER .container1 .logo span .Pre {
+  color: var(--mainColor);
+}
+#HEADER .container1 .Links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#HEADER .container1 .Links .nav-link {
+  opacity: 0.8;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: 0.5s;
+}
+#HEADER .container1 .Links .nav-link:hover {
+  font-weight: bold;
+  opacity: 1;
+  color: var(--mainColor);
+  font-size: 24px;
+  text-decoration: underline;
+}
+#HEADER .container1 .Links .active-link {
+  text-decoration: underline;
+}/*# sourceMappingURL=Navbar.css.map */
