@@ -7,7 +7,6 @@ const Navbar = () => {
       <div className="container1">
         <div className="logo">
           {/* <img src="./Images/bg.jpg" alt="" /> */}
-          <p>hello world</p>
           <span>
             {" "}
             <span className="Pre">MO</span>TECH
